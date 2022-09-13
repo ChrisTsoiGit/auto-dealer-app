@@ -25,12 +25,12 @@ class ManufacturersList extends React.Component {
         <div>
             <h2 className="mt-5"><b>Manufacturers List</b></h2>
             <table className="table table-striped mt-3">
-               <thead>
+                <thead>
                     <tr>
                         <th>Name</th>
                     </tr>
                 </thead>
-               <tbody>
+                <tbody>
                     {this.state.manufacturers.map(manufacturer => {
                         return (
                             <tr key={manufacturer.id}>
