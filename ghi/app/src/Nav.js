@@ -16,8 +16,10 @@ function Nav() {
                 <b>Inventory</b>
               </p>
               <ul className="dropdown-menu">
-                <li><NavLink className="dropdown-item" to="/manufacturers">Manufacturers List</NavLink></li>
-                <li><NavLink className="dropdown-item" to="/manufacturers/new">New Manufacturer</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/manufacturers">Manufacturers </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/manufacturers/new">Add New Manufacturer</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/models">Models </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/models/new">Add New Model</NavLink></li>
               </ul>
             </li>
 

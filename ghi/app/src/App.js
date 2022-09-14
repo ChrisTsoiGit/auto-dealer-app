@@ -4,6 +4,7 @@ import Nav from './Nav';
 import ManufacturersList from './inventory/ManufacturersList';
 import ManufacturerForm from './inventory/ManufacturerForm';
 import ModelForm from './inventory/ModelForm';
+import ModelsList from './inventory/ModelsList';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
             <Route path="new" element={<ManufacturerForm />} />  
           </Route>
           <Route path="models">
-            {/* <Route index element={<ManufacturersList />} /> */}
+            <Route index element={<ModelsList />} />
             <Route path="new" element={<ModelForm />} />  
           </Route>
         </Routes>
