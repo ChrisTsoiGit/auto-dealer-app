@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
 import ManufacturersList from './inventory/ManufacturersList';
-import ManufacturerForm from './inventory/ModelForm';
+import ManufacturerForm from './inventory/ManufacturerForm';
+import ModelForm from './inventory/ModelForm';
 
 
 function App() {
@@ -15,7 +16,11 @@ function App() {
           <Route path="manufacturers">
             <Route index element={<ManufacturersList />} />
             <Route path="new" element={<ManufacturerForm />} />  
-        </Route>
+          </Route>
+          <Route path="models">
+            {/* <Route index element={<ManufacturersList />} /> */}
+            <Route path="new" element={<ModelForm />} />  
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
