@@ -24,7 +24,7 @@ class SalesList extends React.Component {
     render() {
         return (
             <div>
-                <h2 className="mt-5"><b>Sales Record</b></h2>
+                <h2 className="mt-3"><b>Sales Record</b></h2>
                 <table className="table table-striped mt-3">
                     <thead>
                         <tr>

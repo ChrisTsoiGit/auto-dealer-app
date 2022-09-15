@@ -27,11 +27,11 @@ function Nav() {
                 <b>Sales</b>
               </p>
               <ul className="dropdown-menu">
-                <li><NavLink className="dropdown-item" to="/sales">Sales </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/sales">All Sales records</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/sales/new">Add New SalesPerson</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/sales/customer">Add New Customer</NavLink></li>
-                {/* <li><NavLink className="dropdown-item" to="/sales/records">Sales records </NavLink></li> */}
-                
+                <li><NavLink className="dropdown-item" to="/sales/record">Add New Sales Record </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/sales/history">Sales history </NavLink></li>
               </ul>
             </li>
 
