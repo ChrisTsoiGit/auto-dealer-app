@@ -9,6 +9,7 @@ import ModelForm from './inventory/ModelForm';
 import ModelsList from './inventory/ModelsList';
 import AppointmentsList from './Service/AppointmentsList';
 import AppointmentForm from './Service/AppointmentForm';
+import AppointmentHistory from './Service/AppointmentHistory';
 
 
 
@@ -33,7 +34,8 @@ function App() {
           </Route>
           <Route path="appointments">
             <Route index element={<AppointmentsList />} />
-            <Route path="new" element={<AppointmentForm />} />          
+            <Route path="new" element={<AppointmentForm />} />
+            <Route path="history" element={<AppointmentHistory />} />          
           </Route>
         </Routes>
       </div>

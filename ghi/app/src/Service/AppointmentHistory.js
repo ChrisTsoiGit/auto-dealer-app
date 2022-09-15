@@ -1,12 +1,14 @@
 import React from 'react';
 
 
-class AppointmentsList extends React.Component {
+class AppointmentHistory extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            appointments: []
+            appointments: [],
+            key: "",
         };
+        this.handleKeyChange = this.handleKeyChange.bind(this);
     }
 
     async componentDidMount() {
@@ -22,36 +24,23 @@ class AppointmentsList extends React.Component {
         }        
     }
 
-    async handleCancel(id) {
-        const cancelUrl = `http://localhost:8080/api/appointments/${id}/`;
-        const fetchConfig = {
-                method: "delete"
-            }
-        const response = await fetch(cancelUrl, fetchConfig);
-        if (response.ok) {
-            window.location.reload()
-        }
+    handleKeyChange(event) {
+        const value = event.target.value;
+        this.setState({key: value})
     }
-
-    async handleFinished(id) {
-        const finishedUrl = `http://localhost:8080/api/appointments/${id}/`;
-        const fetchConfig = {
-            method: "put",
-            body: JSON.stringify({ is_finished: true }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        };
-        const response = await fetch(finishedUrl, fetchConfig);
-        if (response.ok) {
-            window.location.reload()
-        }
-    }   
 
     render () {
         return (
             <div>
-                <h2 className="mt-5"><b>Appointments</b></h2>
+                <form id="search-by-vin-form">
+                    <div className="input-group mb-3 mt-5">
+                        <input value={this.state.key} onChange={this.handleKeyChange} 
+                        type="text" className="form-control" 
+                        placeholder="Search by VIN" id="key" name="key" />
+                            <span className="input-group-text"><b>Search by VIN</b></span>
+                    </div>
+                </form>   
+                <h2 className="mt-5"><b>Service Appointments History</b></h2>
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -66,11 +55,12 @@ class AppointmentsList extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.appointments.map(appointment => {
-                            let finished = "";
-                            if (appointment.is_finished === true) {
-                                finished = "d-none";
+                            let ignored = "";
+                            if (appointment.vin !== this.state.key && (this.state.key).length > 0) {
+                                ignored = "d-none";
                             }
-                            return (<tr className={finished} key={ appointment.id }>
+                            return (
+                                <tr key={ appointment.id } className={ignored}>
                                     <td>{ appointment.vin }</td>
                                     <td>{ appointment.vip }</td>
                                     <td>{ appointment.owner }</td>
@@ -78,18 +68,13 @@ class AppointmentsList extends React.Component {
                                     <td>{ new Date(appointment.date).toLocaleTimeString() }</td>
                                     <td>{ appointment.technician.name }</td>
                                     <td>{ appointment.reason }</td>
-                                    <td>
-                                        <button onClick={ () => { this.handleCancel(appointment.id)}} className="btn btn-danger">Cancel</button>
-                                        <button onClick={ () => { this.handleFinished(appointment.id)}} className="btn btn-success">Finished</button>
-                                    </td>
-                            </tr>
+                                </tr>
                             )
                         })}    
                     </tbody>
                 </table>    
-            </div>
+            </div>  
         )
     }
-
 }
-export default AppointmentsList;
+export default AppointmentHistory;

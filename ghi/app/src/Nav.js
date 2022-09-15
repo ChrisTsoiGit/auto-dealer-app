@@ -31,11 +31,10 @@ function Nav() {
               </p>
               <ul className="dropdown-menu">
                 <li><NavLink className="dropdown-item" to="/appointments">Service Appointments </NavLink></li>
-                <li><NavLink className="dropdown-item" to="/appointments/new">Add New Appointment</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/appointments/new">Add New Service Appointment</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/appointments/history">Service Appointment History</NavLink></li>
               </ul>
           </li>
-
-
 
 
 
