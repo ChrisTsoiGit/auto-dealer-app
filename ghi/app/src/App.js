@@ -7,11 +7,17 @@ import ManufacturersList from './inventory/ManufacturersList';
 import ManufacturerForm from './inventory/ManufacturerForm';
 import ModelForm from './inventory/ModelForm';
 import ModelsList from './inventory/ModelsList';
+import AppointmentsList from './Service/AppointmentsList';
+import AppointmentForm from './Service/AppointmentForm';
+import AppointmentHistory from './Service/AppointmentHistory';
+import TechniciansList from './Technician/TechnicianList';
+import TechnicianForm from './Technician/TechnicianForm';
 import SalesPersonForm from './Sales/SalesPersonForm';
 import SalesList from './Sales/SalesRecordList';
 import CustomerForm from './Sales/CustomerForm';
 import SalesRecordForm from './Sales/SalesRecordForm';
 import SalesPersonHistory from './Sales/SalesPersonHistory';
+
 
 
 function App() {
@@ -40,6 +46,15 @@ function App() {
           <Route path="models">
             <Route index element={<ModelsList />} />
             <Route path="new" element={<ModelForm />} />  
+          </Route>
+          <Route path="appointments">
+            <Route index element={<AppointmentsList />} />
+            <Route path="new" element={<AppointmentForm />} />
+            <Route path="history" element={<AppointmentHistory />} />          
+          </Route>
+          <Route path="technician">
+            <Route index element={<TechniciansList />} />
+            <Route path="new" element={<TechnicianForm />} />          
           </Route>
         </Routes>
       </div>

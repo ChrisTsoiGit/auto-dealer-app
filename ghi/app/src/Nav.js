@@ -20,12 +20,26 @@ function Nav() {
                 <li><NavLink className="dropdown-item" to="/manufacturers/new">Add New Manufacturer</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/models">Models </NavLink></li>
                 <li><NavLink className="dropdown-item" to="/models/new">Add New Model</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/automobiles">Automobiles </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/automobiles/new">Add New Automobiles</NavLink></li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
+          
+          <li className="nav-item dropdown">
               <p className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="a1">
-                <b>Sales</b>
+                <b>Appointments</b>
               </p>
+              <ul className="dropdown-menu">
+                <li><NavLink className="dropdown-item" to="/appointments">Service Appointments </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/appointments/new">Add New Service Appointment</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/appointments/history">Service Appointment History</NavLink></li>
+              </ul>
+          </li>
+
+          <li className="nav-item dropdown">
+            <p className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="a1">
+              <b>Sales</b>
+            </p>
               <ul className="dropdown-menu">
                 <li><NavLink className="dropdown-item" to="/sales">All Sales records</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/sales/new">Add New SalesPerson</NavLink></li>
@@ -33,12 +47,17 @@ function Nav() {
                 <li><NavLink className="dropdown-item" to="/sales/record">Add New Sales Record </NavLink></li>
                 <li><NavLink className="dropdown-item" to="/sales/history">Sales history </NavLink></li>
               </ul>
-            </li>
+          </li>
 
-
-
-
-
+          <li className="nav-item dropdown">
+              <p className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="a1">
+                <b>Employees</b>
+              </p>
+              <ul className="dropdown-menu">
+                <li><NavLink className="dropdown-item" to="/technician">Our technicians </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/technician/new">Add New technician</NavLink></li>
+              </ul>
+          </li>
 
           </ul>
         </div>

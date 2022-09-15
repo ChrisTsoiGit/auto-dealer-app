@@ -54,9 +54,9 @@ def api_list_appointments(request):
         try:
             vin = content["vin"]
             vip = AutomobileVO.objects.get(vin=vin)
-            content["vip"] = vip  
+            content["vip"] = True  
         except AutomobileVO.DoesNotExist:
-            print("This customer is not a VIP")
+            print("Not a VIP ")
         try:      
             appointment = Appointment.objects.create(**content)
             return JsonResponse(
