@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
-<<<<<<< ghi/app/src/App.js
 import AutomobileForm from './inventory/AutomobileForm';
 import AutomobilesList from './inventory/AutomobilesList';
-=======
 import ManufacturersList from './inventory/ManufacturersList';
 import ManufacturerForm from './inventory/ManufacturerForm';
 import ModelForm from './inventory/ModelForm';
 import ModelsList from './inventory/ModelsList';
->>>>>>> ghi/app/src/App.js
+import SalesPersonForm from './Sales/SalesPersonForm';
+import SalesList from './Sales/SalesRecordList';
+
 
 
 function App() {
@@ -18,12 +18,12 @@ function App() {
       <Nav />
       <div className="container">
         <Routes>
-<<<<<<< ghi/app/src/App.js
-    
-        
-
-=======
           <Route path="/" element={<MainPage />} /> 
+          <Route path="sales">
+            <Route index element={<SalesList/>} />
+            <Route path="new" element={<SalesPersonForm/>} />
+            {/* <Route path="records" element={<SalesList/>} /> */}
+          </Route>
           <Route path="automobiles">
             <Route index element={<AutomobilesList/>} />
             <Route path="new" element={<AutomobileForm/>} />
@@ -37,7 +37,6 @@ function App() {
             <Route path="new" element={<ModelForm />} />  
           </Route>
         </Routes>
->>>>>>> ghi/app/src/App.js
       </div>
     </BrowserRouter>
   );
