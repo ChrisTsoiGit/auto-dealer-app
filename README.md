@@ -26,18 +26,23 @@ Team:
 10. Type http://localhost:3000 in the browser, and explore the functionality of the CarCar page.
 
 ## **Functionality**
-- At the navigation bar of CarCar home page, include the following: Inventory, Service Appointments, Sales, Employees
+- ***At the navigation bar of CarCar home page, include the following: Inventory, Service Appointments, Sales, Employees***
   
 - Inventory 
   - Users can create manufactuer, model and autombile. When creating a autombile, users needs to provide a VIN number that represent a specific vehicle.
   - Users can check all the manufactuers and what the models belong to in the inventory. 
   - Users can check the detail of all the automobiles including VIN number, Color, Year, Model and Manufacturer.
-
-- Sales
 - Services Appointments
+  - Schedule a new service appointment by VIN number, name of the owner, data/time reason and a technician.
+  - Views all the scheduled appointments
+  - Check a history appointments for an automobile by seraching the VIN number.
+  - If the VIN number matches the VIN in inventory, that means the vehicle was bought from the dealership which will be considered a VIP, and a [VIP logo](/dockerNetwork.png "VIP") will be given.
+- Sales
+  - 
+
 - Employees
   - Create a new technician who can associate the for an automobile.
-  - 
+  - Check the technicians who are enrolled.
 
 ## **Service microservice**
 
