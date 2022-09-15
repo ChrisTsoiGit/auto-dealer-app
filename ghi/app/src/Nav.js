@@ -36,8 +36,15 @@ function Nav() {
               </ul>
           </li>
 
-
-
+          <li className="nav-item dropdown">
+              <p className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="a1">
+                <b>Employees</b>
+              </p>
+              <ul className="dropdown-menu">
+                <li><NavLink className="dropdown-item" to="/technician">Our technicians </NavLink></li>
+                <li><NavLink className="dropdown-item" to="/technician/new">Add New technician</NavLink></li>
+              </ul>
+          </li>
 
           </ul>
         </div>
