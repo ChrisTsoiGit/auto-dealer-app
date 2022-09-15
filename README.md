@@ -10,7 +10,7 @@ Team:
 ![Image of model design](/design.png "Design")
 
 ### Docker Network 
-![Image of docker network](/dockerNewtwork.png "Docker network")
+![Image of docker network](/dockerNetwork.png "Docker network")
 
 ## **How to start the application**
 
