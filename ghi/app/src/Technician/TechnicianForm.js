@@ -68,7 +68,7 @@ class TechnicianForm extends React.Component {
                             Wonderful, a new technician has been added!
                         </div>
                         <div className={this.state.fail ? "alert alert-danger mt-4" : "d-none"}>
-                            Oop! Please try again...
+                            Oops! Please try again...
                         </div>
                     </div>
                 </div>

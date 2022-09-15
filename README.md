@@ -2,10 +2,19 @@
 
 Team:
 
-* Echo Yang - Sales microservice
-* Chris Tsoi - Service microservice
+* Echo Yang - Sales/Inventory
+* Chris Tsoi - Service/Inventory
 
 ## Design
+
+### Docker Network 
+
+
+## Functionality
+
+
+## How to start the application
+
 
 ## Service microservice
 
@@ -14,3 +23,5 @@ Team:
 
 Explain your models and integration with the inventory
 microservice, here.
+
+## Screenshot of the application
