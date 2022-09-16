@@ -6,8 +6,7 @@ Team:
 * Chris Tsoi - Service/Inventory
 
 ## **Design**
-
-![Image of model design](/design.png "Design")
+<img src="/design.png"  width="926" height="481">
 
 ### Docker Network 
 ![Image of docker network](/dockerNetwork.png "Docker network")
@@ -64,7 +63,7 @@ Team:
     - technician name - It is ForeignKey of Technician model
 The 
 ![](/Service.png)
-<img src="/Service.png"  width="500" height="500">
+<img src="/Service.png"  width="926" height="481">
 
 
 
