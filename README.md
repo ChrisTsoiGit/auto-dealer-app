@@ -28,21 +28,21 @@ Team:
 ## **Functionality**
 ***At the navigation bar of CarCar home page, users can visit the following navigation tabs as Inventory, Service Appointments, Sales and Employees tabs to experience the funcionalites.***
   
-- *Inventory* 
+- **Inventory** 
   - Users can create manufactuer, model and autombile. When creating a autombile, users needs to provide a VIN number that represent a specific vehicle.
   - Users can check all the manufactuers and what the models belong to in the inventory. 
   - Users can check the detail of all the automobiles including VIN number, Color, Year, Model and Manufacturer.
-- *Services Appointments*
+- **Services Appointments**
   - Schedule a new service appointment by VIN number, name of the owner, data/time reason and a technician.
   - Views all the scheduled appointments
   - Check a history appointments for an automobile by seraching the VIN number.
   - If the VIN number matches the VIN in inventory, that means the vehicle was bought from the dealership which will be considered a VIP, and a [VIP logo](/vip.png "Design") will be given.
-- *Sales*
+- **Sales**
   - Check sales record for all the sales
   - View sales history in order to see all the sales that belong to a specific salesperson.
   - Ability to add a new customer and a salesperson to associate the sales.
   - Create a sales record by entering the price, salesperon, customers and automobile.
-- *Employees*
+- **Employees**
   - Create a new technician who can associate the for an automobile.
   - Check the technicians who are enrolled.
 
@@ -60,7 +60,9 @@ Team:
     - date/time
     - reason of the service
     - technician name - It is ForeignKey of Technician model
-    - 
+
+
+![Service](/Service.png "Service")
 
 
 
