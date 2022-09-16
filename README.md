@@ -1,4 +1,8 @@
 # **CarCar**
+## ***OverView***
+![gif](/uploads/c19b579a0e0d10902d3a7bcb1f28ebd9/gif.gif)
+
+
 
 Team:
 
@@ -89,7 +93,7 @@ The appointments history uses the data from the appointments list, and we can al
       - customer - It is a ForeignKey of Customer model
       - vin
 
-The Sales Microservice contains 4 models. It uses the AutomobileVO model to pull data from the Inventory Microservice. 
+The Sales Microservice contains 4 models. It uses the AutomobileVO model to poll data from the Inventory Microservice. 
 We use the data from both sales and inventory microservice to show sales records including sales person’s name, employee number, customer name, vin number and sales price. We can also filter the sales history by each sales person’s name.
 
 ![](/images/Sales.png)
