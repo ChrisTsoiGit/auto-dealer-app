@@ -64,8 +64,7 @@ Team:
     - technician name - It is ForeignKey of Technician model
 The 
 ![](/Service.png)
-<img src="/Service.png"  width="120" height="120">
-![Service](/Service.png "Service")
+<img src="/Service.png"  width="500" height="500">
 
 
 
