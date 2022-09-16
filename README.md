@@ -9,7 +9,7 @@ Team:
 <img src="/design.png"  width="926" height="481">
 
 ### Docker Network 
-![Image of docker network](/dockerNetwork.png "Docker network")
+![Image of docker network](/images/dockerNetwork.png "Docker network")
 
 ## **How to start the application**
 
@@ -35,7 +35,7 @@ Team:
   - Schedule a new service appointment by VIN number, name of the owner, data/time reason and a technician.
   - Views all the scheduled appointments
   - Check a history appointments for an automobile by seraching the VIN number.
-  - If the VIN number matches the VIN in inventory, that means the vehicle was bought from the dealership which will be considered a VIP, and a [VIP logo](/vip.png "Design") will be given.
+  - If the VIN number matches the VIN in inventory, that means the vehicle was bought from the dealership which will be considered a VIP, and a [VIP logo](/images/vip.png "Design") will be given.
 - **Sales**
   - Check sales record for all the sales
   - View sales history in order to see all the sales that belong to a specific salesperson.
@@ -47,28 +47,31 @@ Team:
 
 ## **Service microservice**
 - *Models*
-  - AutomobileVO
-    - vin 
-    - import_href
-  - Technician
-    - name
-    - employee_number
-  - Appointment
-    - vin 
-    - name of the owner
-    - date/time
-    - reason of the service
-    - is_finished
-    - is_canceled
-    - technician name - It is ForeignKey of Technician model
-The 
-![](/Service.png)
-<img src="/Service.png"  width="926" height="481">
+    - AutomobileVO (Value Object)
+      - vin 
+      - import_href
+    - Technician (Entity)
+      - name
+      - employee_number
+    - Appointment (Entity)
+      - vin 
+      - name of the owner
+      - date/time
+      - reason of the service
+      - is_finished
+      - is_canceled
+      - technician name - It is ForeignKey of Technician model
+  
+The Service microservice polls data from the Inventory microservice through the AutomobileVO. AutomobileVO model in Service is polling data from Automobile model in Inventory to matche the vin numbers. If the input vin number in Appointment matches the vin number in Inventory, that means the vehicle is purchased from the dealership, and the customer should received an VIP treatment.
+
+![](/images/Service.png)
 
 
 
 ## **Sales microservice**
 
-Explain your models and integration with the inventory
-microservice, here.
+The Sales Microservice contains 4 models. It uses the AutomobileVO model to pull data from the Inventory Microservice. 
+We use the data from both sales and inventory microservice to show sales records including sales person’s name, employee number, customer name, vin number and sales price. We can also filter the sales history by each sales person’s name.
+
+![](/images/Sales.png)
 
