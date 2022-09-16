@@ -6,7 +6,7 @@ Team:
 * Chris Tsoi - Service/Inventory
 
 ## **Design**
-<img src="/design.png"  width="926" height="481">
+<img src="/images/design.png"  width="926" height="481">
 
 ### Docker Network 
 ![Image of docker network](/images/dockerNetwork.png "Docker network")
@@ -60,15 +60,34 @@ Team:
       - reason of the service
       - is_finished
       - is_canceled
-      - technician name - It is ForeignKey of Technician model
+      - technician name - It is a ForeignKey of Technician model
   
 The Service microservice polls data from the Inventory microservice through the AutomobileVO. AutomobileVO model in Service is polling data from Automobile model in Inventory to matche the vin numbers. If the input vin number in Appointment matches the vin number in Inventory, that means the vehicle is purchased from the dealership, and the customer should received an VIP treatment.
+The components of the Service microservice includes adding appointments, display all the appointments, and checking the appointment history. The appointments list page will be using the data that from the add appointment page which means all the added appontments will be displayed on the appointments list page. Also, an employee has a option clicking the Finished button which means the appointment is finished and will be displayed on the appointments history page. If an employee click Cancel button, the data of this appointment will be gone.
+The appointments history uses the data from the appointments list, and we can also search the vin numbres to visit all the appointments belong to that vin number. If the vin number in the appointment history matches the vin number in the automobiles page, that will be considered a VIP and a [VIP logo](/images/vip.png "Design") will be appeared.
 
 ![](/images/Service.png)
 
 
 
 ## **Sales microservice**
+- *Models*
+    - AutomobileVO (Value Object)
+      - vin 
+      - import_href
+      - is_sold
+    - SalesPerson (Entity)
+      - name
+      - employee_number
+    - Customer (Entity)
+      - name 
+      - address
+      - phone_number
+    - SaleRecord (Entity)
+      - price
+      - sales_person - It is a ForeignKey of SalesPerson model
+      - customer - It is a ForeignKey of Customer model
+      - vin
 
 The Sales Microservice contains 4 models. It uses the AutomobileVO model to pull data from the Inventory Microservice. 
 We use the data from both sales and inventory microservice to show sales records including sales person’s name, employee number, customer name, vin number and sales price. We can also filter the sales history by each sales person’s name.
