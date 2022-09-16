@@ -26,7 +26,7 @@ Team:
 10. Type http://localhost:3000 in the browser, and explore the functionality of the CarCar page.
 
 ## **Functionality**
-- ***At the navigation bar of CarCar home page, include the following: Inventory, Service Appointments, Sales, Employees***
+***At the navigation bar of CarCar home page, include the following: Inventory, Service Appointments, Sales, Employees***
   
 - Inventory 
   - Users can create manufactuer, model and autombile. When creating a autombile, users needs to provide a VIN number that represent a specific vehicle.
