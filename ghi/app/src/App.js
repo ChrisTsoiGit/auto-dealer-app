@@ -17,6 +17,7 @@ import SalesList from './Sales/SalesRecordList';
 import CustomerForm from './Sales/CustomerForm';
 import SalesRecordForm from './Sales/SalesRecordForm';
 import SalesPersonHistory from './Sales/SalesPersonHistory';
+import Chatbot from './Chatbot'
 
 
 
@@ -50,7 +51,8 @@ function App() {
           <Route path="appointments">
             <Route index element={<AppointmentsList />} />
             <Route path="new" element={<AppointmentForm />} />
-            <Route path="history" element={<AppointmentHistory />} />          
+            <Route path="history" element={<AppointmentHistory />} />
+            <Route path="chatbot" element={<Chatbot />} />          
           </Route>
           <Route path="technician">
             <Route index element={<TechniciansList />} />

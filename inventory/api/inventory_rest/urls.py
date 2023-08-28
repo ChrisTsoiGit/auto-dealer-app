@@ -9,6 +9,8 @@ from .views import (
     api_vehicle_model,
 )
 
+from . import chatbot_views
+
 urlpatterns = [
     path(
         "automobiles/",
@@ -40,4 +42,5 @@ urlpatterns = [
         api_vehicle_model,
         name="api_vehicle_model",
     ),
+    path("chatbot/", chatbot_views.generate_response, name="chatbot-response"),
 ]
